@@ -16,7 +16,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
     entry: './client/index.js',
     output: {
-        path: path.resolve('dist'),
+        path: path.resolve('docs'),
         filename: 'index_bundle.js'
     },
     module: {
@@ -38,11 +38,7 @@ module.exports = {
                         loader: 'style-loader',
                     }],
                     use: [{
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            localIdentName: '[name]__[local]--[hash:base64:5]',
-                        },
+                        loader: 'css-loader'
                     }, {
                         loader: 'sass-loader',
                     }],
